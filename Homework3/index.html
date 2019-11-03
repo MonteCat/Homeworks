@@ -1,0 +1,656 @@
+<!-- 1. Використовуючи цикли вивести 
+    на екран 20 символів «о».
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        for (i=1;i<=20;i++)
+        document.write(`o`)
+    </script>
+</body>
+</html>
+
+2. Відобразити трикутник за допомогою символів «о»
+о
+оо
+ооо
+оооо
+ооооо
+оооооо
+ооооооо
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let count=1
+        for (let i=1;i<=7;i++)
+        {
+            for(j=1;j<=count;j++)
+            {
+            document.write(`o`)
+            }
+        document.write(`<br>`)
+        count++
+        }
+    </script>
+</body>
+</html>
+
+2.1. Відобразити трикутник за допомогою символів «о»
+       о
+      оо
+     ооо
+    оооо
+   ооооо
+  оооооо
+ ооооооо
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let num_b=8
+    let num_o=1
+    for(k=1;k<=7;k++)
+    {
+        for(i=1;i<=num_b;i++)
+        {
+        document.write(`&nbsp`)
+        }
+            for(j=1;j<=num_o;j++)
+            {
+            document.write("o")
+            }
+    num_b--
+    num_o++
+    document.write("<br>")
+    }
+</script>
+</body>
+</html>
+
+
+3. Відобразити трикутник за допомогою символів «о»
+оооооооооооо
+ооооооооооо
+оооооооооо
+ооооооооо
+оооооооо
+…
+оо
+о
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+let count=12
+for (let i=1;i<=12;i++)
+{
+    for(j=1;j<=count;j++)
+    {
+    document.write(`o`)
+    }
+document.write(`<br>`)
+count--
+}
+</script>
+</body>
+</html>
+
+3.1. Відобразити трикутник за допомогою символів «о»
+оооооооооооо
+ ооооооооооо
+  оооооооооо
+   ооооооооо
+    оооооооо
+        …
+          оо
+           о
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let num_b=0
+    let num_o=12
+    for(k=1;k<=12;k++)
+    {
+        for(i=1;i<=num_b;i++)
+        {
+        document.write(`&nbsp`)
+        }
+            for(j=1;j<=num_o;j++)
+            {
+            document.write("o")
+            }
+    num_b++
+    num_o--
+    document.write("<br>")
+    }
+</script>
+</body>
+</html>
+
+
+
+4. Побудувати ялинку
+о
+оо
+ооо
+оооо
+ооооо
+о
+оо
+ооо
+оооо
+ооооо
+о
+оо
+ооо
+оооо
+ооооо
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    for(let i=1;i<=3;i++)
+    {   
+    let num_o=1
+        for(let j=1;j<=7;j++)
+            {
+            for(let k=1;k<=num_o;k++)
+            {
+            document.write("o")
+            }
+        num_o++
+        document.write("<br>")
+        }    
+    }    
+</script>
+</body>
+</html>
+
+5. Інвестор вклав   тис. грн.. на 20 років під 20% річних.
+ Визначити за допомогою циклів суму, яку він одержить
+  (без оподаткування).
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let s=parseFloat(prompt("Enter s"))
+    for(let i=1;i<=20;i++)
+    {
+        s*=1.2
+    }
+    document.write(`${s}`)
+</script>
+</body>
+</html>
+
+6. Інвестор вклав   тис. грн.. на 20 років під 20% річних,
+ податок складає 5% від суми прибутку. 
+ Визначити за допомогою циклів суму, яку він одержить.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let s=parseFloat(prompt('Enter a count'))
+    for(i=1;i<=2;i++)
+    {
+        s=s*1.2-s*0.2*0.05
+    }
+    document.write(`${s}`)
+    </script>
+</body>
+</html>
+
+7. Інвестор вклав   тис. грн.. на 20 років
+ під 20% річних а потім на 17 років під 27% річних.
+  Визначити за допомогою циклів суму, яку він одержить.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let s=parseFloat(prompt("Enter a count"))
+    for(i=1;i<=20;i++)
+    {
+    s=s*1.2
+    }
+    for(j=1;j<=17;j++)
+    {
+    s=s*1.27
+    }
+    document.write(`${s}`)
+    </script>
+</body>
+</html>
+
+8. Вивести на екран послідовність символів
+а о а о а о а о а о …
+Всього символів 82.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    for(i=1;i<=41;i++)
+    {
+        document.write(`ao `)
+    }
+</script>
+</body>
+</html>
+
+9. Вивести на екран 
+1 1
+2 1 2
+3 1 2 3
+4 1 2 3 4
+…
+I 1 2 3 ..i
+23 1 2 3 .. 22 23
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    for(let i=1;i<=23;i++)
+    {
+        document.write(`${i}`)
+        for(let j=1;j<=i;j++)
+        {
+            document.write(`${j}`)
+        }
+        document.write(`<br>`)
+    }
+    </script>
+</body>
+</html>
+
+
+10. Вивести на екран 
+1 1
+2 1234
+3 123456789
+4 1234…16
+5 1 … 25
+6 1…36
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    for(let i=1;i<=6;i++)
+    {
+        document.write(`${i}`)
+        for(let j=1;j<=Math.pow(i,2);j++)
+        {
+            document.write(`${j}`)
+        }
+        document.write(`<br>`)
+    }
+    </script>
+</body>
+</html>
+
+11. Вивести на екран усі двоцифрові числа,
+ у яких перша цифра є більшою або рівною за другу.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    for (let i = 1; i < 10; i++) {
+            for (let j = 1; j < 10; j++) {
+                if (i >= j)
+                    document.write(`${i}${j} `)
+            }
+        }
+    </script>
+</body>
+</html>
+
+11.1. Вивести на екран усі трицифрові числа,
+ у яких перша цифра є більшою або рівною за 
+ суму другої і третьої.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    for (let i = 1; i < 10; i++) 
+    {
+        for (let j = 1; j < 10; j++) 
+        {
+            for(let k=1;k<10;k++)
+            {
+                if(i>=j+k)
+                document.write(`${i}${j}${k} `)
+            }              
+        }
+ }
+    </script>
+</body>
+</html>
+
+12. Написати програму виведення на екран 
+кожного символу латинського алфавіту та поруч
+ з кожним з них символу, що передує йому та що
+  слідує за ним.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        for(let i=`A`.charCodeAt();
+        i<=`Z`.charCodeAt();i++)
+        {
+  document.write(`${String.fromCharCode(i-1)}
+  ${String.fromCharCode(i)}
+  ${String.fromCharCode(i+1)}<br>`)
+        }
+    </script>
+</body>
+</html>
+
+13. Вивести на екран таблицю розмірністю 4*3 
+(4 рядки, 3 стовпці). У кожній клітинці вставити 
+її порядковий номер.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+   document.write(`<table border="2px">`)
+   for(i=1;i<=4;i++)
+   {
+    document.write(`<tr>`)
+       for(j=1;j<=3;j++)
+       {
+           document.write(`<td>${j}</td>`)
+       }
+    document.write(`</tr>`)
+   }
+   document.write(`</table`)
+   </script> 
+</body>
+</html>
+
+14. За допомогою циклів вивести на екран ненумерований список
+
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+   document.write(`<ul type="circle">`)
+   for(i=1;i<=7;i++)
+   {
+       document.write(`<li>Punkt${i}</li>`)
+   }
+   document.write(`</ul>`)
+   </script> 
+</body>
+</html>
+
+14. За допомогою циклів вивести на екран нумерований список
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+   document.write(`<ol>`)
+   for(i=1;i<=7;i++)
+   {
+       document.write(`<li>Punkt${i}</li>`)
+   }
+   document.write(`</ol>`)
+   </script> 
+</body>
+</html>
+0. Вивести на екран
+A B C D E
+B C D E F
+C D E F G
+D E F G H
+E F G H I
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    for(let i=`A`.charCodeAt();i<=`E`.charCodeAt();i++)
+    {
+        for(let j=i;j<=i+4;j++)
+        {
+            document.write(`${String.fromCharCode(j)}`)
+        }
+    document.write(`<br>`)
+    }
+</script>
+</body>
+</html>
+5. Задача посложней.
+ Нарисовать равнобедренный треугольник из символов ^.
+  Высоту выбирает пользователь. Например: высота = 5,
+ на экране
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let height=parseInt(prompt('Enter a height'))
+    let num_symbol=1
+    let num_prob=height
+    for(k=1;k<=height;k++)
+    {
+        for(i=1;i<=num_prob;i++)
+        {
+        document.write(`&nbsp`)
+        }
+            for(j=1;j<=num_symbol;j++)
+            {
+            document.write("^")
+            }
+    num_symbol=num_symbol+2
+    num_prob--
+    document.write("<br>")
+    }
+</script>
+</body>
+</html>
+6. На складе имеется определённое количество 
+ящиков с яблоками (в нашем примере 15). 
+Когда подъезжает машина для погрузки, 
+попросить пользователя ввести,
+ сколько ящиков загрузить в первую машину, 
+во вторую и так далее, пока не
+закончатся ящики с яблоками.
+Предусмотреть тот случай, когда
+пользователь введёт количество
+ ящиков больше, чем есть на складе.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let boxes=parseInt(prompt('Enter number of boxes'))
+    let outBoxes=0
+    do
+    {
+    let boxInCar=parseInt(prompt("Enter boxes per car"))
+    outBoxes=outBoxes+boxInCar
+    }
+    while(outBoxes<boxes)
+    if(outBoxes>=boxes)
+    document.write("No boxes")
+</script>
+</body>
+</html>
+9. Коммерсант, имея стартовый 
+капитал n рублей, занялся торговлей, 
+которая увеличивает капитал на р% ежемесячно. 
+Через сколько лет он накопит сумму s, 
+достаточную для покупки собственного магазина?
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>   
+let start=parseFloat(prompt("Enter start"))
+let percent=parseFloat(prompt("Enter percent per month"))
+let suma=parseFloat(prompt("How much you need?"))
+let month=0
+for(let count=start;count<suma;count=count*(percent/100)+count)
+{
+month++
+}
+let years=Math.floor(month/12)
+let monthes=month%12
+document.write(`It takes ${years} years and ${monthes} monthes`)
+</script>
+</body>
+</html>
+11. Написать программу,
+ которая выводит на экран таблицу 
+ умножения на k (k вводится с клавиатуры).
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>   
+let k=parseInt(prompt("Enter k"))
+for(i=1;i<=10;i++)
+{
+    let res=k*i
+    document.write(`${k}*${i}=${res}<br>`)
+}
+</script>
+</body>
+</html>
+ -->
