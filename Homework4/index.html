@@ -1,0 +1,313 @@
+<!-- Задача 0. Створити функцію, 
+    яка за номером місяця повертає
+     пору року, до якої відноситься цей місяць.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function getSeason(month)
+    {
+        switch(month)
+        {
+            case 12:
+            case 1:
+            case 2: return "Winter"
+            case 3:
+            case 4:
+            case 5: return "Spring"
+            case 6:
+            case 7:
+            case 8: return "Summer"
+            case 9:
+            case 10:
+            case 11: return "Autumn"
+            default: return "Error"
+        }
+    }
+    let month=parseInt(prompt("Enter number of month"))
+    let season=getSeason(month)
+    document.write(`${season}`)
+    </script>
+</body>
+</html>
+Задача 1. Створити функцію,
+ яка за номером місяця повертає 
+ його назву.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function getSeason(month)
+    {
+        switch(month)
+        {
+            case 12: return "December"
+            case 1: return "January"
+            case 2: return "February"
+            case 3: return "March"
+            case 4: return "April"
+            case 5: return "May"
+            case 6: return "June"
+            case 7: return "July"
+            case 8: return "August"
+            case 9: return "September"
+            case 10: return "October"
+            case 11: return "November"
+            default: return "Error"
+        }
+    }
+    let month=parseInt(prompt("Enter number of month"))
+    let season=getSeason(month)
+    document.write(`${season}`)
+    </script>
+</body>
+</html>
+Задача 2. Створити функцію, 
+яка за номером тижня повертає 
+кількість уроків
+(так, як у вас було у школі).
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ function countLesson (n)
+ {
+switch(n)
+{
+case 1:return 5
+case 2:return 4
+case 3:return 3
+case 4:return 7
+case 5:return 3
+case 6:return "Holiday"
+case 7:return "Holiday"
+}
+ }
+let n =parseInt(prompt("Enter number of day"))
+let lessons = countLesson(n)
+document.write(`${lessons} lessons`)
+   </script>
+</body>
+</html>
+Задача 3. Створити окремі функції, 
+які для 4 чисел знаходять:
+1)суму;
+2)добуток;
+3)середнє арифметичне;
+4)мінімальне значення. 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function getSum(a1, a2, a3, a4)
+    {
+    return sum=a1+a2+a3+a4
+    }
+    function getProd(a1, a2, a3, a4)
+    {
+    return prod=a1*a2*a3*a4
+    }
+    function getAverage(a1, a2, a3, a4)
+    {
+    return average=(a1+a2+a3+a4)/4
+    }
+    // function getMin(a1, a2, a3, a4)
+    // {
+    // return min=Math.min(a1,a2,a3,a4)
+    // }
+    let a=parseFloat(prompt("Enter a"))
+    let b=parseFloat(prompt("Enter b"))
+    let c=parseFloat(prompt("Enter c"))
+    let d=parseFloat(prompt("Enter d"))
+    let min = Math.min(a,b,c,d)
+    document.write(`${min}`)
+    </script>
+</body>
+</html>
+Задача 4. Створити функцію, 
+яка для 3 заданих чисел знаходить 
+кількість парних.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ function findNumber (a,b,c)
+ {
+number=3-a%2-b%2-c%2
+document.write(`${number}`)
+ }
+ let a=parseInt(prompt("Enter a"))
+ let b=parseInt(prompt("Enter b"))
+ let c=parseInt(prompt("Enter c"))
+ findNumber(a,b,c)
+    </script>
+</body>
+</html>
+Задача 5. Створити функції, 
+які переводять:
+Сантиметри у дюйми;
+Кілограми у фунти;
+Кілометри у милі.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function CmToInch (cm)
+    {
+        let inches=cm/2.54
+        return inches
+    }
+    function KgToFunt (kg)
+    {
+        let funt =2.44*kg
+        return funt
+    }
+    function KmToMile (km)
+    {
+        let miles=4.4444*km
+        return miles
+    }
+    let kg=parseFloat(prompt("Enter a kg"))
+    let funt=KgToFunt(kg)
+    document.write(`${funt}`)
+    </script>
+</body>
+</html>
+Задача 6. Створити функцію,
+ яка створює таблицю з вказаною 
+ кількістю рядків і стовпців
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function getTable(x,y)
+    {
+    document.write(`<table border="2px">`)
+    for(i=1;i<=x;i++)
+    {
+    document.write(`<tr>`)
+        for(j=1;j<=y;j++)
+        {
+            document.write(`<td></td>`)
+        }
+        document.write('</tr>')   
+    }
+    document.write(`</table>`)
+    }
+    let x=parseInt(prompt('Enter x'))
+    let y = parseInt(prompt('Enter y'))
+    let table =getTable(x,y)
+    </script>
+</body>
+</html>
+Задача 7. Створити функцію,
+ яка випадковим чином виводить
+  на екран одне із 4 зображень 
+  (шляхи до зображень передаються 
+  у функцію)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ function showPicture (x)
+ {
+if(x==1)
+{
+    document.write(`<img src="bryket.jpg"`)
+}
+if(x==2)
+{
+    document.write(`<img src="Fon.jpg"`)
+}
+if(x==3)
+{
+    document.write(`<img src="fonn.jpg"`)
+}
+if(x==4)
+{
+    document.write(`<img src="paket.jpg"`)
+}
+}
+x=Math.floor(Math.random()*4)+1
+showPicture(x)
+    </script>
+</body>
+</html>
+Задача 8. Створити функцію,
+ яка виводить банер
+  (у функцію передаються:
+   зображення, заголовок та 
+   посилання, куди переходимо
+    при кліку на зображення 
+    (тег img повине знаходитись 
+    у середині тега a: <a>
+         <img src=”шлях”> </a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function getBanner(link,img,caption)
+    {
+        document.write(`<a href="${link}"><img src="${img}" alt="${caption}"></a>`)
+    }
+    let link=`./`
+    let img="paket.jpg"
+    let caption=`Icecream`
+    getBanner(link,img,caption)
+    </script>
+</body>
+</html> -->
