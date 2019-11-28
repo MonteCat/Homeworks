@@ -1,0 +1,394 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+Заменить каждый элемент массива
+с четным номером на соседний слева элемент
+
+let arr=[1,2,3,4,5,6,7,8]
+arr.forEach((el,i,a)=>a[i]%2==0?a[i]=a[i-1]:a[i])
+alert(arr)
+
+Задача 2. Дано масив цін.
+Сформувати новий масив, 
+який містить тільки ті ціни,
+які менші за задану -->
+
+let arr=[100,120,110,130,125,140]
+let newArr=arr.map((el,i,a)=>a[i]<130?arr.splice(i,1):a[i])
+alert(newArr)
+
+Задача 5. Дано ваги автомобілів
+на парковці. З’ясувати, 
+чи усі автомобілі є легковими
+(легшими за 2000 кг).
+
+let arr=[1900,2100,2200,1800,1500]
+if(arr.some((el)=>el>2000))
+alert("No")
+else
+alert("Yes")
+
+Задача 2. Дано
+інформацію про
+прибуток К магазинів
+протягом тижня.Знайти :
+1) загальний прибуток
+кожного масиву за тиждень;
+2) загальний прибуток
+усіх магазинів кожного дня
+(загальний прибуток усіх
+магазинів за понеділок, за вівторок, і т.д.);
+
+const countShops = parseInt(prompt("Enter count of weeks)"))
+const countDays = 7
+let arrShops = []
+for (i = 0; i < countShops; i++) {
+    var arrDay = [] 
+    let profitPerDay 
+    for (j = 0; j < 7; j++) {
+        profitPerDay = parseFloat(prompt(`Enter profit
+        at ${i + 1}shop;${j + 1}day`))
+        arrDay.push(profitPerDay)
+        }
+        arrShops.push(arrDay)
+        } 
+for (i = 0; i < countShops; i++) {
+    let sumShopWeek = 0 
+    for (j = 0; j < 7; j++) {
+        sumShopWeek += arrShops[i][j]
+        } 
+        alert(`${i + 1}shop per week sum=${sumShopWeek}`)
+    } 
+var sumMonday = 0
+for (i = 0; i < countShops; i++) { 
+    sumMonday += arrShops[i][1]
+     } 
+alert(sumMonday)
+
+Задача 1. Дано послідовність номерів автомобілів.
+ Підрахувати кількість номерів, які :
+починаються на букву «А»;
+
+let arr=prompt("Enter numbers with spaces").split(' ')
+    function sameLetters(arr){
+        let count=0
+        for(i=0;i<arr.length;i++){
+            if(arr[i][0]===arr[i][arr[i].length-1])
+            count++
+        }
+        return count
+    }
+    document.write(sameLetters(arr))
+        </script>
+</body>
+</html>
+
+Задача. Розробити калькуляртор
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <label>
+        First number
+        <input type="text" id="x" value="0">
+    </label><br>
+    <label>
+        Second number
+        <input type="text" id="y" value="0">
+    </label>
+    <hr>
+    <label>
+        Result
+        <input type="text" id="res" value="0">
+    </label>
+    <button id="sum" onclick="getSum">
+        +
+    </button>
+    <button id="dif">
+        -
+    </button>
+    <button id="mult">
+        *
+    </button>
+    <button id="div">
+        /
+    </button>
+    <script>
+        function getSum() {
+            let a = parseFloat(document.getElementById(`x`).value)
+            let b = parseFloat(document.getElementById(`y`).value)
+            document.getElementById(`res`).value = a + b
+        }
+        function getDif() {
+            let a = parseFloat(document.getElementById(`x`).value)
+            let b = parseFloat(document.getElementById(`y`).value)
+            document.getElementById(`res`).value = a - b
+        }
+        function getMult() {
+            let a = parseFloat(document.getElementById(`x`).value)
+            let b = parseFloat(document.getElementById(`y`).value)
+            document.getElementById(`res`).value = a * b
+        }
+        function getDiv() {
+            let a = parseFloat(document.getElementById(`x`).value)
+            let b = parseFloat(document.getElementById(`y`).value)
+            document.getElementById(`res`).value = a / b
+        }
+        document.getElementById(`sum`).onclick = getSum
+        document.getElementById(`dif`).onclick = getDif
+        document.getElementById(`mult`).onclick = getMult
+        document.getElementById(`div`).onclick = getDiv
+    </script>
+</body>
+
+</html>
+
+Задача.
+Звіт з підприємницької діяльності : 
+Кількість років : 3 
+Податок : 5%
+Чи є податкова пільга (2%) :  
+Кількість працівників : 2
+Загальний прибуток за весь період : обчислити
+Загальна кількість виплачених податків: обчислити
+Сумарна кількість виплачених коштів: обчислити
+Фільтр за розмірами заробітної плати
+Розмір заробітної плати:
+Мін.значення   :  3000
+Макс.значення : 7000
+Знайти працівників
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <label>
+        Enter count of years
+        <input type="text" name="" id="years">
+    </label><br>
+    <button id="createTable">
+        Create table
+    </button>
+    <table border="2px">
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Profit</th>
+            </tr>
+        </thead>
+        <tbody id="container">
+            <tr>
+                <td>
+                    <input type="number">
+                </td>
+                <td>
+                    <input type="number">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <label>
+        Tax(5%):
+        <input type="checkbox" value="0.05" id="tax">
+    </label>
+    <label>
+        Tax benefit(2%)
+        <input type="checkbox" value="0.02" id="benefit">
+    </label>
+    <p>
+        Total profit:<span id="totalProfit"></span>
+    </p>
+    <button id="getTotal">
+        Total profit
+    </button>
+    <p>
+        Total taxes: <span id="totalTaxes"></span>
+    </p>
+    <button id="totalTaxesbtn">
+        Total taxes
+    </button><br>
+    <label>
+        Enter count of workers
+        <input type="number" id="numberOfWorkers">
+    </label><br>
+    <button id="crate">
+        Create table of workers
+    </button>
+    <table border="2px">
+        <thead>
+            <tr>
+                <td>Surname</td>
+                <td>Salary</td>
+            </tr>
+        </thead>
+        <tbody id="container2">
+            <tr>
+                <td><input type="text" name="surname"></td>
+                <td>
+                    <input type="number" name="salary">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        Total salary<span id="totsal"></span>
+    </p>
+    <button id="totalsal">
+        Total salary
+    </button>
+    <p>
+        Total costs
+        <span id="totalCost"></span>
+    </p>
+    <button id="totCost">
+        Total costs
+    </button>
+    <p>
+        filter
+        enter min:<input type="number" id="min">
+    </p>
+    <p>
+        enter max:<input type="number" id="max">
+    </p><br>
+    <button id="filter">
+        Filter
+    </button>
+    <p>
+        <span id="filterWorkers"></span>
+    </p>
+    <script>
+        function getTable() {
+            const tr = document.createElement('tr')
+            const td1 = document.createElement('td')
+            const inp1 = document.createElement('input')
+            inp1.type = 'number'
+            td1.appendChild(inp1)
+            tr.appendChild(td1)
+            const td2 = document.createElement('td')
+            const inp2 = document.createElement('input')
+            inp2.type = 'number'
+            inp2.name = 'profit'
+            td2.appendChild(inp2)
+            tr.appendChild(td2)
+            return tr
+        }
+        function numRows(years) {
+            const yearsCount = parseInt(document.getElementById('years').value)
+            const container = document.getElementById('container')
+            container.innerHTML = ''
+            for (let i = 0; i < yearsCount; i++) {
+                const new_tr = getTable(i + 1)
+                container.appendChild(new_tr)
+            }
+        }
+        function getTotalProfit() {
+            const container = document.getElementById('container')
+            const profits = document.getElementsByName('profit')
+            let totalProfit = 0
+            for (i = 0; i < profits.length; i++) {
+                totalProfit += parseInt(profits[i].value)
+            }
+            document.getElementById('totalProfit').innerText = totalProfit
+        }
+        function totalTaxes() {
+            let totalProfit = parseFloat(document.getElementById('totalProfit').innerText)
+            let totalTaxes = 0
+            if (document.getElementById('tax').checked) {
+                totalTaxes = totalProfit * 0.05
+            }
+            if (document.getElementById('benefit').checked &&
+                document.getElementById('tax').checked) {
+                totalTaxes = totalProfit * 0.03
+            }
+            document.getElementById('totalTaxes').innerText = totalTaxes
+        }
+        function getWorkersTable() {
+            const tr_2 = document.createElement('tr')
+            const td1_2 = document.createElement('td')
+            const inp1_2 = document.createElement('input')
+            inp1_2.type = 'text'
+            inp1_2.name = 'surname'
+            td1_2.appendChild(inp1_2)
+            tr_2.appendChild(td1_2)
+            const td2_2 = document.createElement('td')
+            const inp2_2 = document.createElement('input')
+            inp2_2.type = 'number'
+            inp2_2.name = 'salary'
+            td2_2.appendChild(inp2_2)
+            tr_2.appendChild(td2_2)
+            return tr_2
+        }
+        function createTableOfWorkers() {
+            const numberOfWorkers = parseInt(document.getElementById('numberOfWorkers').value)
+            const container2 = document.getElementById('container2')
+            container2.innerHTML = ''
+            for (let i = 0; i < numberOfWorkers; i++) {
+                const new_tr_2 = getWorkersTable(i + 1)
+                container2.appendChild(new_tr_2)
+            }
+        }
+        function totalSalary() {
+            const container2 = document.getElementById('container2')
+            const salary = document.getElementsByName('salary')
+            let totalSal = 0
+            for (i = 0; i < salary.length; i++) {
+                totalSal += parseInt(salary[i].value)
+            }
+            document.getElementById('totsal').innerText = totalSal
+        }
+        function gettotalcosts() {
+            let totalProfit = parseFloat(document.getElementById('totalProfit').innerText)
+            let totalSalary = parseFloat(document.getElementById('totsal').innerText)
+            let totalcosts = totalProfit + totalSalary
+            document.getElementById('totalCost').innerText = totalcosts
+        }
+        function filterWorkers() {
+            const container2 = document.getElementById('container2')
+            const surnames = document.getElementsByName('surname')
+            const salarys = document.getElementsByName('salary')
+            const min = parseInt(document.getElementById('min').value)
+            const max = parseInt(document.getElementById('max').value)
+            for (let i = 0; i < salarys.length; i++) {
+                if (salarys[i].value >= min &&
+                    salarys[i].value <= max) {
+                    document.getElementById('filterWorkers').innerText +=
+                        `${surnames[i].value} - ${salarys[i].value},  `
+                }
+            }
+        }
+        window.onload = function () {
+            document.getElementById('createTable').onclick = numRows
+            document.getElementById('getTotal').onclick = getTotalProfit
+            document.getElementById('totalTaxesbtn').onclick = totalTaxes
+            document.getElementById('crate').onclick = createTableOfWorkers
+            document.getElementById('totalsal').onclick = totalSalary
+            document.getElementById('totCost').onclick = gettotalcosts
+            document.getElementById('filter').onclick = filterWorkers
+        }
+    </script>
+
+</body>
+
+</html> -->
