@@ -100,7 +100,7 @@ function min(a){
     if(minimum>a[i])
     minimum=a[i] 
   } 
- document.write(`min is ${minimum}<br>`)
+ document.write(`min is ${minimum}<br>`)   //Краще, щоб функція не виводила, а повертала значення (у наступних функцій анаолгічно)
 }
 function max(a){
   let maximum=a[0]
@@ -129,3 +129,11 @@ atHolidays(a)
   </script>
 </body>
 </html> -->
+
+
+Стосовно запитання про виведення номерів днів коли кількість дорівнює мінімальному значенню:
+
+for (let i = 0; i < countDays; i++) {
+    якщо і-тове значення дорівнює мінімальному (яке знайшли раніше за допомогою Вашої функціїі  function min(a))
+          то вивести номер "і"               
+}
