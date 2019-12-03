@@ -1,0 +1,154 @@
+<!-- Rozklad table -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        table{
+            background-color: greenyellow;
+        }
+        .name{
+            background-color: red;
+            font-style: normal;
+            font-size: xx-large;
+        }
+        tr {
+            color: rgb(87, 13, 44);
+            text-align: center;
+            font-size: x-large;
+            font-style: italic;
+        }
+        ul{
+            color: rgb(85, 50, 50);
+        }
+        .red{
+            background-color: salmon;
+        }
+        .blue
+        {
+            background-color: slateblue;
+        }
+    
+    </style>
+    <table width="50%" height="100%" align="center">
+        <tr>
+            <td colspan="2" class="name">Schedule</td>
+        </tr>
+        <tr>
+            <td class="blue">
+                Monday
+                <ul type="none">
+                    <li>Grammar <strong>9.00</strong></li>
+                    <li>Paint <strong>10.00</strong></li>
+                    <li>English <strong>11.00</strong></li>
+                    <li>Music <strong>12.00</strong></li>
+                </ul>
+            </td>
+            <td class="red">
+                Tuesday
+                <ul type="none">
+                    <li>Grammar <strong>9.00</strong></li>
+                    <li>Paint <strong>10.00</strong></li>
+                    <li>English <strong>11.00</strong></li>
+                    <li>Music <strong>12.00</strong></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td class="red">
+                Wednesday
+                <ul type="none">
+                    <li>Grammar <strong>9.00</strong></li>
+                    <li>Paint <strong>10.00</strong></li>
+                    <li>English <strong>11.00</strong></li>
+                    <li>Music <strong>12.00</strong></li>
+                </ul>
+            </td>
+            <td class="blue">
+                Thursday
+                <ul type="none">
+                    <li>Grammar <strong>9.00</strong></li>
+                    <li>Paint <strong>10.00</strong></li>
+                    <li>English <strong>11.00</strong></li>
+                    <li>Music <strong>12.00</strong></li>
+                </ul>
+            </td>
+        </tr>
+        <tr class="red">
+            <td colspan="2">
+                Friday
+                <ul type="none">
+                    <li>Grammar <strong>9.00</strong></li>
+                    <li>Paint <strong>10.00</strong></li>
+                    <li>English <strong>11.00</strong></li>
+                    <li>Music <strong>12.00</strong></li>
+                </ul>
+            </td>
+        </tr>
+
+
+    </table>
+</body>
+
+</html>
+
+
+<!--Chess board-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        td {
+            width: 1cm;
+            height: 1cm;
+        }
+        table :nth-child(odd) :nth-child(even) {
+            background-color: red;
+        }
+        table :nth-child(even) :nth-child(odd){
+            background-color: red;
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+    <table border="2px" id="board">
+
+    </table>
+
+    <script>
+        function getTable() {
+
+            for (let i = 0; i < 12; i++) {
+                let tr = document.createElement('tr')
+                for (let k = 0; k < 12; k++) {
+                    let td = document.createElement('td')
+                    tr.appendChild(td)
+                }
+                document.getElementById('board').appendChild(tr)
+            }
+
+        }
+        window.onload = function () {
+            getTable()
+            
+        }
+    </script>
+</body>
+
+</html>
